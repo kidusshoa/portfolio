@@ -1,0 +1,160 @@
+{
+  "personal": {
+    "name": "Kidus Zekarias",
+    "title": "Full-Stack Software Engineer",
+    "location": "Addis Ababa, Ethiopia",
+    "phone": "+251902951717",
+    "email": "captainkevin2008@gmail.com",
+    "github": "https://github.com/kidusshoa",
+    "linkedin": "https://www.linkedin.com/in/kidus-zekarias/",
+    "objective": "To obtain a full-stack engineering position in a dynamic and challenging environment where I can utilize my skills and knowledge to contribute to the growth of the organization."
+  },
+  "education": [
+    {
+      "institution": "Haramaya University",
+      "location": "Harar, Ethiopia",
+      "degree": "Bachelor of Science in Information Systems"
+    },
+    {
+      "institution": "ALX Holberton Software Engineering Programme",
+      "location": "Remote",
+      "degree": "Full-Stack Developer",
+      "description": "A 12-month (70 hrs/week) immersive programme that prepares participants for a global career as a Full-Stack Developer."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Web Development",
+      "items": ["HTML", "CSS", "JavaScript", "jQuery"]
+    },
+    {
+      "category": "Frameworks",
+      "items": ["React", "Next.js", "Tailwind CSS", "Django", "Express.js", "FastAPI", "ElysiaJS"]
+    },
+    {
+      "category": "Programming Languages",
+      "items": ["C++", "Python", "Java", "PHP", "C#", "Node.js", "Go"]
+    },
+    {
+      "category": "Databases",
+      "items": ["MySQL", "PostgreSQL", "Supabase", "MongoDB", "Firebase", "Turso", "Sanity"]
+    },
+    {
+      "category": "DevOps",
+      "items": ["Nginx", "Apache", "SSH", "SSL"]
+    },
+    {
+      "category": "Operating Systems",
+      "items": ["Ubuntu Linux (4+ years)"]
+    },
+    {
+      "category": "Other",
+      "items": [
+        "Data Structures & Algorithms (C++, Python)",
+        "Git & GitHub, Bash scripting",
+        "Responsive Design, Web Best Practices",
+        "Web Scraping and Crawling (Python, JavaScript)",
+        "Machine Learning, Microservices, Cloud Computing"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Playstream Interactive",
+      "location": "Addis Ababa, Ethiopia",
+      "role": "Full-Stack Engineer",
+      "period": "Sep 2025 – Present",
+      "highlights": [
+        "Building scalable full-stack applications using Next.js, NestJS, Express.js, Django, Golang, PostgreSQL, and microservices architecture",
+        "Developing interactive, real-time gaming and media platforms",
+        "Implementing secure APIs, optimization pipelines, and cloud-native deployments",
+        "Collaborating with designers, backend teams, and product leads to deliver high-quality features",
+        "Leading performance improvements and automation for production systems"
+      ],
+      "stacks": ["Next.js", "NestJS", "Express.js", "Django", "Go", "PostgreSQL", "Microservices"]
+    },
+    {
+      "company": "Tewanay Engineering",
+      "location": "Addis Ababa, Ethiopia (Hybrid)",
+      "role": "Software Engineer Part-Time",
+      "period": "Sep 2024 – Sep 2025",
+      "highlights": [
+        "Built and maintained web-based solutions using Next.js and Ruby on Rails",
+        "Collaborated with cross-functional teams to deliver scalable, responsive features",
+        "Contributed to deployment, testing, and debugging of production-ready apps",
+        "Developed mobile applications using React Native and Expo",
+        "Provided DevOps engineering and related maintenance services"
+      ],
+      "stacks": ["Next.js", "Ruby on Rails", "React Native", "Expo"]
+    },
+    {
+      "company": "Sand Technologies",
+      "location": "Remote",
+      "role": "Software Engineer Intern",
+      "period": "Sep 2024 – Nov 2024",
+      "highlights": [
+        "Developed and optimized mobile applications using React Native and Expo",
+        "Assisted in building responsive and interactive frontend features",
+        "Designed UI/UX workflows and prototypes using Figma",
+        "Collaborated with senior developers on code reviews and product improvements"
+      ],
+      "stacks": ["React Native", "Expo", "Figma"]
+    },
+    {
+      "company": "SkillBridge Institute of Technology",
+      "location": "Addis Ababa, Ethiopia (Remote)",
+      "role": "Back-End Developer Intern",
+      "period": "Jul 2025 – Sep 2025",
+      "highlights": [
+        "Designed and implemented server-side logic using Express.js and PostgreSQL",
+        "Built and optimized APIs for business applications",
+        "Worked on database schema design, queries, and performance tuning",
+        "Collaborated with the frontend team, contributing to nearly half of the frontend tasks",
+        "Strengthened application performance, security, and scalability"
+      ],
+      "stacks": ["Express.js", "PostgreSQL", "Node.js"]
+    }
+  ],
+  "leadership": [
+    {
+      "organization": "Haramaya University Computing and Informatics Students Association (HUCISA)",
+      "role": "Co-Founder & Research & Innovation Team Leader",
+      "period": "Apr 2024 – June 2025",
+      "highlights": [
+        "Co-founded the official tech association at Haramaya University",
+        "Served as Lead Software Engineer, overseeing development projects and mentorship",
+        "Instructed a Competitive Programming with Python course, certifying 25+ students",
+        "Fostered a culture of innovation, collaboration, and technical excellence among students"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Real-Time Gaming Platform",
+      "description": "Interactive gaming and media platform with real-time features, secure APIs, and cloud-native deployment built for Playstream Interactive.",
+      "stacks": ["Next.js", "NestJS", "PostgreSQL", "Go", "Microservices"],
+      "github": "https://github.com/kidusshoa",
+      "live": null,
+      "featured": true
+    },
+    {
+      "id": "project-2",
+      "title": "Full-Stack Web Application",
+      "description": "Scalable web application with responsive UI, RESTful APIs, and production-ready deployment pipeline.",
+      "stacks": ["Next.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
+      "github": "https://github.com/kidusshoa",
+      "live": null,
+      "featured": true
+    },
+    {
+      "id": "project-3",
+      "title": "Mobile App with React Native",
+      "description": "Cross-platform mobile application with Expo, featuring responsive design and optimized performance.",
+      "stacks": ["React Native", "Expo", "TypeScript"],
+      "github": "https://github.com/kidusshoa",
+      "live": null,
+      "featured": false
+    }
+  ]
+}
