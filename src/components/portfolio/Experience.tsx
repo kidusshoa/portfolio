@@ -4,6 +4,7 @@ import AnimatedSection, {
 } from './AnimatedSection'
 import SectionHeading from './SectionHeading'
 import { portfolio } from '../../lib/portfolio'
+import { TechChip } from '../../lib/tech-icons'
 
 export default function Experience() {
   const { experience } = portfolio
@@ -44,9 +45,7 @@ export default function Experience() {
 
                 <div className="flex flex-wrap gap-2">
                   {job.stacks.map((stack) => (
-                    <span key={stack} className="skill-chip">
-                      {stack}
-                    </span>
+                    <TechChip key={stack} name={stack} />
                   ))}
                 </div>
               </article>

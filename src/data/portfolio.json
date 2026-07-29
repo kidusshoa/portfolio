@@ -5,9 +5,14 @@
     "location": "Addis Ababa, Ethiopia",
     "phone": "+251902951717",
     "email": "captainkevin2008@gmail.com",
+    "telegram": "@kidus_zekarias",
     "github": "https://github.com/kidusshoa",
     "linkedin": "https://www.linkedin.com/in/kidus-zekarias/",
     "objective": "To obtain a full-stack engineering position in a dynamic and challenging environment where I can utilize my skills and knowledge to contribute to the growth of the organization."
+  },
+  "profile": {
+    "image": "/images/profile.jpg",
+    "alt": "Kidus Zekarias"
   },
   "education": [
     {
@@ -29,7 +34,7 @@
     },
     {
       "category": "Frameworks",
-      "items": ["React", "Next.js", "Tailwind CSS", "Django", "Express.js", "FastAPI", "ElysiaJS"]
+      "items": ["React", "Next.js", "TanStack Start", "React Native", "Tailwind CSS", "Django", "Express.js", "FastAPI", "ElysiaJS"]
     },
     {
       "category": "Programming Languages",
@@ -41,11 +46,11 @@
     },
     {
       "category": "DevOps",
-      "items": ["Nginx", "Apache", "SSH", "SSL"]
+      "items": ["Docker", "Kubernetes", "Nginx", "Apache", "SSH", "SSL"]
     },
     {
       "category": "Operating Systems",
-      "items": ["Ubuntu Linux (4+ years)"]
+      "items": ["Ubuntu (4+ years)", "Windows Server", "Arch Linux", "Mac"]
     },
     {
       "category": "Other",
@@ -71,7 +76,19 @@
         "Collaborating with designers, backend teams, and product leads to deliver high-quality features",
         "Leading performance improvements and automation for production systems"
       ],
-      "stacks": ["Next.js", "NestJS", "Express.js", "Django", "Go", "PostgreSQL", "Microservices"]
+      "stacks": ["Next.js", "NestJS", "Express.js", "Django", "Go", "PostgreSQL", "Microservices", "TanStack Start", "React Native"]
+    },
+    {
+      "company": "Nexus Tutorial",
+      "location": "Addis Ababa, Ethiopia (Remote)",
+      "role": "JavaScript and Web Development Instructor",
+      "period": "Nov 2025 – Present",
+      "highlights": [
+        "Teaching JavaScript and web development as a part-time instructor",
+        "Delivering practical lessons on modern frontend and backend fundamentals",
+        "Guiding students through hands-on projects using Express.js and related web technologies"
+      ],
+      "stacks": ["JavaScript", "Express.js", "Web Development"]
     },
     {
       "company": "Tewanay Engineering",
@@ -130,29 +147,59 @@
   ],
   "projects": [
     {
-      "id": "project-1",
-      "title": "Real-Time Gaming Platform",
-      "description": "Interactive gaming and media platform with real-time features, secure APIs, and cloud-native deployment built for Playstream Interactive.",
-      "stacks": ["Next.js", "NestJS", "PostgreSQL", "Go", "Microservices"],
-      "github": "https://github.com/kidusshoa",
+      "id": "khanut",
+      "title": "Khanut — AI Local Business Finder",
+      "description": "Final year university project: an AI-powered local business finder for Ethiopia with Gemini API integration, Express.js backend, and a hybrid recommendation engine built with FastAPI and machine learning combining collaborative filtering and content-based approaches.",
+      "stacks": ["Express.js", "MongoDB", "TypeScript", "FastAPI", "Python", "Gemini API", "Machine Learning"],
+      "github": "https://github.com/kidusshoa/khanut-back-end",
+      "links": [
+        {
+          "label": "Recommendation Engine",
+          "url": "https://github.com/kidusshoa/recommendation-service"
+        }
+      ],
       "live": null,
       "featured": true
     },
     {
-      "id": "project-2",
-      "title": "Full-Stack Web Application",
-      "description": "Scalable web application with responsive UI, RESTful APIs, and production-ready deployment pipeline.",
-      "stacks": ["Next.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
-      "github": "https://github.com/kidusshoa",
+      "id": "erc4337-paymaster",
+      "title": "ERC-4337 Paymaster & Gas Relayer",
+      "description": "Production-shaped ERC-4337 Verifying Paymaster and gas relayer/bundler backend with on-chain Foundry contracts and a NestJS service that signs sponsorship approvals, submits UserOperations on-chain, and recovers automatically when transactions get stuck. Includes Postgres, Redis, BullMQ, e2e tests, and a Docker Compose demo.",
+      "stacks": ["NestJS", "Solidity", "PostgreSQL", "Redis", "Docker", "TypeScript"],
+      "github": "https://github.com/kidusshoa/ERC-4337-Paymaster",
       "live": null,
       "featured": true
     },
     {
-      "id": "project-3",
-      "title": "Mobile App with React Native",
-      "description": "Cross-platform mobile application with Expo, featuring responsive design and optimized performance.",
-      "stacks": ["React Native", "Expo", "TypeScript"],
-      "github": "https://github.com/kidusshoa",
+      "id": "weather-forecasting",
+      "title": "Weather Forecasting ML Platform",
+      "description": "University machine learning class project with a Django REST backend and Next.js frontend for weather forecasting, data processing, and visualization.",
+      "stacks": ["Django", "Next.js", "Python", "Machine Learning", "Tailwind CSS"],
+      "github": "https://github.com/kidusshoa/weather-forecasting-backend",
+      "links": [
+        {
+          "label": "Frontend",
+          "url": "https://github.com/kidusshoa/Weather-Forecasting-Frontend"
+        }
+      ],
+      "live": null,
+      "featured": true
+    },
+    {
+      "id": "kebron",
+      "title": "Kebron Rents",
+      "description": "ALX Software Engineering capstone — an online home and apartment renting platform built for Ethiopia with a Django backend and React frontend.",
+      "stacks": ["React", "Tailwind CSS", "Django", "PostgreSQL", "SQLite"],
+      "github": "https://github.com/kidusshoa/kebron",
+      "live": null,
+      "featured": false
+    },
+    {
+      "id": "javafx-car-rental",
+      "title": "Car Rental Management System",
+      "description": "University OOP project — a desktop car rental management system built with Java and JavaFX.",
+      "stacks": ["Java", "JavaFX", "OOP"],
+      "github": "https://github.com/kidusshoa/JavaFX-System",
       "live": null,
       "featured": false
     }

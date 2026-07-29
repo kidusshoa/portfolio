@@ -4,6 +4,11 @@ import AnimatedSection, {
 } from './AnimatedSection'
 import SectionHeading from './SectionHeading'
 import { portfolio } from '../../lib/portfolio'
+import {
+  ICON_SKILL_CATEGORIES,
+  TechChip,
+  TechIconCard,
+} from '../../lib/tech-icons'
 
 export default function Skills() {
   const { skills } = portfolio
@@ -18,22 +23,36 @@ export default function Skills() {
         />
 
         <StaggerContainer className="grid gap-5 sm:grid-cols-2">
-          {skills.map((group) => (
-            <StaggerItem key={group.category}>
-              <article className="feature-card h-full rounded-xl p-5">
-                <h3 className="mb-3 text-base font-semibold text-[var(--sea-ink)]">
-                  {group.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span key={item} className="skill-chip">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            </StaggerItem>
-          ))}
+          {skills.map((group) => {
+            const useIconCards = ICON_SKILL_CATEGORIES.has(group.category)
+
+            return (
+              <StaggerItem
+                key={group.category}
+                className={useIconCards ? 'sm:col-span-2' : undefined}
+              >
+                <article className="feature-card h-full rounded-xl p-5">
+                  <h3 className="mb-4 text-base font-semibold text-[var(--sea-ink)]">
+                    {group.category}
+                  </h3>
+
+                  {useIconCards ? (
+                    <div className="tech-icon-grid">
+                      {group.items.map((item) => (
+                        <TechIconCard key={item} name={item} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap gap-2">
+                      {group.items.map((item) => (
+                        <TechChip key={item} name={item} />
+                      ))}
+                    </div>
+                  )}
+                </article>
+              </StaggerItem>
+            )
+          })}
         </StaggerContainer>
       </div>
     </AnimatedSection>

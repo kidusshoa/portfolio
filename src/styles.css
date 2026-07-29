@@ -1,10 +1,12 @@
-
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Rubik", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-serif: "Gelasio", Georgia, serif;
+  --font-accent: "Goldman", sans-serif;
+  --font-heading: "Changa", sans-serif;
 }
 
 :root {
@@ -165,7 +167,66 @@ pre code {
 }
 
 .display-title {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.island-kicker {
+  font-family: var(--font-accent);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.69rem;
+  color: var(--kicker);
+}
+
+/* Google Font utility classes */
+.rubik-body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gelasio-body {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.goldman-regular {
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.goldman-bold {
+  font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.changa-heading {
+  font-family: "Changa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .island-shell {
@@ -401,14 +462,6 @@ a {
     transform 180ms ease;
 }
 
-.island-kicker {
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.69rem;
-  color: var(--kicker);
-}
-
 .nav-link {
   position: relative;
   display: inline-flex;
@@ -525,12 +578,61 @@ a {
 .skill-chip {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
   border: 1px solid var(--chip-line);
   border-radius: 999px;
   background: var(--chip-bg);
   padding: 0.3rem 0.65rem;
   font-size: 0.75rem;
   font-weight: 600;
+  color: var(--sea-ink-soft);
+}
+
+.tech-chip-icon {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: var(--lagoon-deep);
+}
+
+.tech-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.75rem;
+}
+
+.tech-icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 6.5rem;
+  padding: 0.85rem 0.65rem;
+  border: 1px solid var(--chip-line);
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--chip-bg) 92%, transparent);
+  text-align: center;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.tech-icon-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklab, var(--lagoon-deep) 40%, var(--chip-line));
+  box-shadow: 0 10px 24px rgba(30, 90, 72, 0.12);
+}
+
+.tech-icon-card-icon {
+  font-size: 2rem;
+  color: var(--lagoon-deep);
+}
+
+.tech-icon-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.25;
   color: var(--sea-ink-soft);
 }
 
@@ -583,5 +685,53 @@ a {
 
 .contact-card {
   height: 100%;
+}
+
+.profile-photo-shell {
+  width: min(100%, 15rem);
+}
+
+.profile-photo-frame {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 3px solid color-mix(in oklab, var(--lagoon) 35%, var(--line));
+  background: linear-gradient(
+    165deg,
+    color-mix(in oklab, var(--surface-strong) 90%, white 10%),
+    var(--surface)
+  );
+  box-shadow:
+    0 1px 0 var(--inset-glint) inset,
+    0 18px 40px rgba(30, 90, 72, 0.14);
+}
+
+.profile-photo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--lagoon-deep);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(79, 184, 178, 0.25), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(47, 106, 74, 0.18), transparent 50%),
+    color-mix(in oklab, var(--chip-bg) 88%, transparent);
+}
+
+.profile-photo-caption {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--sea-ink-soft);
 }
 

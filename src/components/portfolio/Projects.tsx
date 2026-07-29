@@ -5,6 +5,7 @@ import AnimatedSection, {
 } from './AnimatedSection'
 import SectionHeading from './SectionHeading'
 import { portfolio } from '../../lib/portfolio'
+import { TechChip } from '../../lib/tech-icons'
 
 export default function Projects() {
   const { projects } = portfolio
@@ -15,10 +16,10 @@ export default function Projects() {
         <SectionHeading
           kicker="Projects"
           title="Featured work"
-          description="Edit projects in src/data/portfolio.json — update titles, descriptions, stacks, and GitHub links anytime."
+          description="Real projects from university, ALX, and personal builds — edit anytime in src/data/portfolio.json."
         />
 
-        <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer className="grid gap-5 md:grid-cols-2">
           {projects.map((project) => (
             <StaggerItem key={project.id}>
               <article className="feature-card flex h-full flex-col rounded-xl p-5">
@@ -37,9 +38,7 @@ export default function Projects() {
 
                 <div className="mb-4 flex flex-wrap gap-2">
                   {project.stacks.map((stack) => (
-                    <span key={stack} className="skill-chip">
-                      {stack}
-                    </span>
+                    <TechChip key={stack} name={stack} />
                   ))}
                 </div>
 
@@ -51,8 +50,20 @@ export default function Projects() {
                     className="project-link"
                   >
                     <FaGithub />
-                    GitHub
+                    {project.links?.length ? 'Backend' : 'GitHub'}
                   </a>
+                  {project.links?.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      <FaGithub />
+                      {link.label}
+                    </a>
+                  ))}
                   {project.live && (
                     <a
                       href={project.live}

@@ -5,45 +5,55 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
   FaPhone,
+  FaTelegram,
 } from 'react-icons/fa'
 import AnimatedSection from './AnimatedSection'
 import SectionHeading from './SectionHeading'
 import { portfolio } from '../../lib/portfolio'
 
-const contactItems = [
-  {
-    icon: FaEnvelope,
-    label: 'Email',
-    value: portfolio.personal.email,
-    href: `mailto:${portfolio.personal.email}`,
-  },
-  {
-    icon: FaPhone,
-    label: 'Phone',
-    value: portfolio.personal.phone,
-    href: `tel:${portfolio.personal.phone}`,
-  },
-  {
-    icon: FaMapMarkerAlt,
-    label: 'Location',
-    value: portfolio.personal.location,
-    href: null,
-  },
-  {
-    icon: FaGithub,
-    label: 'GitHub',
-    value: 'github.com/kidusshoa',
-    href: portfolio.personal.github,
-  },
-  {
-    icon: FaLinkedin,
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/kidus-zekarias',
-    href: portfolio.personal.linkedin,
-  },
-]
-
 export default function Contact() {
+  const { personal } = portfolio
+  const telegramHandle = personal.telegram.replace('@', '')
+
+  const contactItems = [
+    {
+      icon: FaEnvelope,
+      label: 'Email',
+      value: personal.email,
+      href: `mailto:${personal.email}`,
+    },
+    {
+      icon: FaPhone,
+      label: 'Phone',
+      value: personal.phone,
+      href: `tel:${personal.phone}`,
+    },
+    {
+      icon: FaTelegram,
+      label: 'Telegram',
+      value: personal.telegram,
+      href: `https://t.me/${telegramHandle}`,
+    },
+    {
+      icon: FaMapMarkerAlt,
+      label: 'Location',
+      value: personal.location,
+      href: null,
+    },
+    {
+      icon: FaGithub,
+      label: 'GitHub',
+      value: 'github.com/kidusshoa',
+      href: personal.github,
+    },
+    {
+      icon: FaLinkedin,
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/kidus-zekarias',
+      href: personal.linkedin,
+    },
+  ]
+
   return (
     <AnimatedSection id="contact" className="mt-12 sm:mt-16">
       <div className="island-shell rounded-2xl p-6 sm:p-8">

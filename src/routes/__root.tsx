@@ -29,13 +29,43 @@ export const Route = createRootRoute({
     ],
     links: [
       {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossOrigin: 'anonymous',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Changa:wght@200..800&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Goldman:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap',
+      },
+      {
         rel: 'stylesheet',
         href: appCss,
       },
     ],
   }),
+  notFoundComponent: NotFound,
   shellComponent: RootDocument,
 })
+
+function NotFound() {
+  return (
+    <main className="page-wrap px-4 py-20 text-center">
+      <h1 className="display-title mb-3 text-3xl font-bold text-[var(--sea-ink)]">
+        Page not found
+      </h1>
+      <p className="mb-6 text-[var(--sea-ink-soft)]">
+        That page doesn&apos;t exist. Head back to the portfolio.
+      </p>
+      <a href="/" className="btn-primary no-underline">
+        Back to Home
+      </a>
+    </main>
+  )
+}
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (

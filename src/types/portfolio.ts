@@ -4,9 +4,15 @@ export interface PersonalInfo {
   location: string
   phone: string
   email: string
+  telegram: string
   github: string
   linkedin: string
   objective: string
+}
+
+export interface ProfilePhoto {
+  image: string
+  alt: string
 }
 
 export interface Education {
@@ -37,18 +43,25 @@ export interface Leadership {
   highlights: string[]
 }
 
+export interface ProjectLink {
+  label: string
+  url: string
+}
+
 export interface Project {
   id: string
   title: string
   description: string
   stacks: string[]
   github: string
+  links?: ProjectLink[]
   live: string | null
   featured: boolean
 }
 
 export interface PortfolioData {
   personal: PersonalInfo
+  profile: ProfilePhoto
   education: Education[]
   skills: SkillCategory[]
   experience: Experience[]
