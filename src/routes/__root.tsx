@@ -3,6 +3,7 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import { LocaleProvider } from '../i18n/LocaleProvider'
 
 import appCss from '../styles.css?url'
 
@@ -42,6 +43,15 @@ export const Route = createRootRoute({
         href: 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Changa:wght@200..800&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Goldman:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap',
       },
       {
+        rel: 'icon',
+        href: '/images/portfolio.png',
+        type: 'image/png',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/images/portfolio.png',
+      },
+      {
         rel: 'stylesheet',
         href: appCss,
       },
@@ -75,9 +85,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
-        <Header />
-        {children}
-        <Footer />
+        <LocaleProvider>
+          <Header />
+          {children}
+          <Footer />
+        </LocaleProvider>
         <TanStackDevtools
           config={{
             position: 'bottom-right',

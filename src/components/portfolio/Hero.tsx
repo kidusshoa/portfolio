@@ -8,10 +8,12 @@ import {
   FaTelegram,
 } from 'react-icons/fa'
 import { portfolio } from '../../lib/portfolio'
-import ProfilePhoto from './ProfilePhoto'
+import { useLocale } from '../../i18n/LocaleProvider'
+import FaceModel from './FaceModel'
 
 export default function Hero() {
   const { personal } = portfolio
+  const { t } = useLocale()
 
   return (
     <section
@@ -21,17 +23,8 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-20 -top-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(79,184,178,0.32),transparent_66%)]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(47,106,74,0.18),transparent_66%)]" />
 
-      <div className="relative grid items-center gap-8 lg:grid-cols-[1fr_auto] lg:gap-10">
+      <div className="relative grid items-center gap-8 lg:grid-cols-[1fr_minmax(16rem,22rem)] lg:gap-10">
         <div>
-          <motion.p
-            className="island-kicker mb-3"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Software Developer Portfolio
-          </motion.p>
-
           <motion.h1
             className="display-title mb-4 max-w-3xl text-4xl leading-[1.05] font-bold tracking-tight text-[var(--sea-ink)] sm:text-6xl"
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +40,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {personal.title}
+            {t.personal.title}
           </motion.p>
 
           <motion.p
@@ -56,7 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            {personal.objective}
+            {t.personal.objective}
           </motion.p>
 
           <motion.div
@@ -67,7 +60,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2">
               <FaMapMarkerAlt className="text-[var(--lagoon)]" />
-              {personal.location}
+              {t.personal.location}
             </span>
             <a
               href={`tel:${personal.phone}`}
@@ -101,10 +94,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <a href="#projects" className="btn-primary">
-              View Projects
+              {t.hero.viewProjects}
             </a>
             <a href="#contact" className="btn-secondary">
-              Get In Touch
+              {t.hero.getInTouch}
             </a>
             <a
               href={personal.github}
@@ -136,7 +129,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <ProfilePhoto />
+        <FaceModel />
       </div>
     </section>
   )

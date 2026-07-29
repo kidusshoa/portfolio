@@ -735,3 +735,108 @@ a {
   color: var(--sea-ink-soft);
 }
 
+.site-logo-img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.face-model-shell {
+  width: min(100%, 22rem);
+}
+
+.face-model-frame {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 3px solid color-mix(in oklab, var(--lagoon) 35%, var(--line));
+  background: linear-gradient(
+    165deg,
+    color-mix(in oklab, var(--surface-strong) 90%, white 10%),
+    var(--surface)
+  );
+  box-shadow:
+    0 1px 0 var(--inset-glint) inset,
+    0 18px 40px rgba(30, 90, 72, 0.14);
+  touch-action: none;
+}
+
+.face-model-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  cursor: grab;
+}
+
+.face-model-canvas:active {
+  cursor: grabbing;
+}
+
+.face-model-hint {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.65rem;
+  margin: 0;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--chip-line);
+  background: color-mix(in oklab, var(--chip-bg) 88%, transparent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sea-ink-soft);
+  pointer-events: none;
+}
+
+.face-model-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 16rem;
+}
+
+.face-model-fallback-img {
+  width: 70%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  border: 1px solid var(--chip-line);
+  border-radius: 0.75rem;
+  background: var(--chip-bg);
+  padding: 0.15rem;
+}
+
+.lang-btn {
+  border: 0;
+  border-radius: 0.55rem;
+  background: transparent;
+  color: var(--sea-ink-soft);
+  padding: 0.35rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--sea-ink);
+  background: var(--link-bg-hover);
+}
+
+.lang-btn.is-active {
+  color: var(--lagoon-deep);
+  background: color-mix(in oklab, var(--lagoon) 18%, transparent);
+}
+

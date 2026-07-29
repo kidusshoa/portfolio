@@ -8,11 +8,13 @@
     "telegram": "@kidus_zekarias",
     "github": "https://github.com/kidusshoa",
     "linkedin": "https://www.linkedin.com/in/kidus-zekarias/",
-    "objective": "To obtain a full-stack engineering position in a dynamic and challenging environment where I can utilize my skills and knowledge to contribute to the growth of the organization."
+    "objective": "I build full-stack products end to end — from clean interfaces to reliable APIs and databases. I care about clear code, fast delivery, and solutions that actually work for real users.",
+    "about": "Full-stack engineer specializing in scalable web platforms, APIs, and modern frontend systems. I build production-ready applications across React, Next.js, NestJS, and cloud-native backends — with a strong focus on performance, clean architecture, and delivering measurable product impact."
   },
   "profile": {
-    "image": "/images/profile.jpg",
-    "alt": "Kidus Zekarias"
+    "image": "/images/portfolio.png",
+    "alt": "Kidus Zekarias",
+    "model": "/images/face_model.glb"
   },
   "education": [
     {

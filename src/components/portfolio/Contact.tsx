@@ -10,45 +10,47 @@ import {
 import AnimatedSection from './AnimatedSection'
 import SectionHeading from './SectionHeading'
 import { portfolio } from '../../lib/portfolio'
+import { useLocale } from '../../i18n/LocaleProvider'
 
 export default function Contact() {
   const { personal } = portfolio
+  const { t } = useLocale()
   const telegramHandle = personal.telegram.replace('@', '')
 
   const contactItems = [
     {
       icon: FaEnvelope,
-      label: 'Email',
+      label: t.contact.email,
       value: personal.email,
       href: `mailto:${personal.email}`,
     },
     {
       icon: FaPhone,
-      label: 'Phone',
+      label: t.contact.phone,
       value: personal.phone,
       href: `tel:${personal.phone}`,
     },
     {
       icon: FaTelegram,
-      label: 'Telegram',
+      label: t.contact.telegram,
       value: personal.telegram,
       href: `https://t.me/${telegramHandle}`,
     },
     {
       icon: FaMapMarkerAlt,
-      label: 'Location',
-      value: personal.location,
+      label: t.contact.location,
+      value: t.personal.location,
       href: null,
     },
     {
       icon: FaGithub,
-      label: 'GitHub',
+      label: t.contact.github,
       value: 'github.com/kidusshoa',
       href: personal.github,
     },
     {
       icon: FaLinkedin,
-      label: 'LinkedIn',
+      label: t.contact.linkedin,
       value: 'linkedin.com/in/kidus-zekarias',
       href: personal.linkedin,
     },
@@ -58,9 +60,9 @@ export default function Contact() {
     <AnimatedSection id="contact" className="mt-12 sm:mt-16">
       <div className="island-shell rounded-2xl p-6 sm:p-8">
         <SectionHeading
-          kicker="Contact"
-          title="Let's connect"
-          description="Open to full-stack engineering opportunities. Reach out anytime."
+          kicker={t.contact.kicker}
+          title={t.contact.title}
+          description={t.contact.description}
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

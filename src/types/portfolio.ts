@@ -8,11 +8,13 @@ export interface PersonalInfo {
   github: string
   linkedin: string
   objective: string
+  about: string
 }
 
 export interface ProfilePhoto {
   image: string
   alt: string
+  model?: string
 }
 
 export interface Education {

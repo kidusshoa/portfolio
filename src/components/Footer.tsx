@@ -1,19 +1,19 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { portfolio } from '../lib/portfolio'
+import { useLocale } from '../i18n/LocaleProvider'
 
 export default function Footer() {
   const year = new Date().getFullYear()
   const { personal } = portfolio
+  const { t } = useLocale()
 
   return (
     <footer className="site-footer mt-20 px-4 pb-14 pt-10 text-[var(--sea-ink-soft)]">
       <div className="page-wrap flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <p className="m-0 text-sm">
-          &copy; {year} {personal.name}. All rights reserved.
+          &copy; {year} {personal.name}. {t.footer.rights}
         </p>
-        <p className="island-kicker m-0">
-          Built with TanStack Start, Framer Motion & React Icons
-        </p>
+        <p className="island-kicker m-0">{t.footer.tagline}</p>
       </div>
       <div className="mt-4 flex justify-center gap-4">
         <a
